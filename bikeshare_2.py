@@ -109,7 +109,7 @@ def trip_duration_stats(df):
     print('-'*40)
 
 def user_stats(df):
-    print('\nCalculating User Stats...\n')
+    print('\nCalculating User Stats....\n')
     start_time = time.time()
     
     if not df.empty:
@@ -130,7 +130,7 @@ def user_stats(df):
         else:
             print("Birth year data is not available for this city.")
     else:
-        print("No data available for the specified filters.")
+        print("No data available for the specified filters, SORRY!")
         
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -147,9 +147,11 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? If so, Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
+
+
 
 if __name__ == "__main__":
     main()
