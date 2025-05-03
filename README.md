@@ -13,3 +13,4 @@ Includes input validation and raw data display.
 How to Use:
 Run the script and follow the prompts in the terminal.
 
+.
