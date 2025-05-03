@@ -111,29 +111,27 @@ def trip_duration_stats(df):
 def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
-    
-    if not df.empty:
-        user_types = df['User Type'].value_counts()
-        print(f"User types count:\n{user_types}")
+
+    if df.empty:
+        print("No data available for the specified filters.")
+    else:
+        print("User types count:\n", df['User Type'].value_counts())
+
         if 'Gender' in df.columns:
-            gender_stats = df['Gender'].value_counts()
-            print(f"Gender count:\n{gender_stats}")
+            print("Gender count:\n", df['Gender'].value_counts())
         else:
             print("Gender data is not available for this city.")
+
         if 'Birth Year' in df.columns:
-            earliest_birth_year = df['Birth Year'].min()
-            most_recent_birth_year = df['Birth Year'].max()
-            most_common_birth_year = df['Birth Year'].mode()[0]
-            print(f"Earliest year of birth: {earliest_birth_year}")
-            print(f"Most recent year of birth: {most_recent_birth_year}")
-            print(f"Most common year of birth: {most_common_birth_year}")
+            print("Earliest year of birth:", df['Birth Year'].min())
+            print("Most recent year of birth:", df['Birth Year'].max())
+            print("Most common year of birth:", df['Birth Year'].mode()[0])
         else:
             print("Birth year data is not available for this city.")
-    else:
-        print("No data available for the specified filters.")
-        
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+
+    print("\nThis took %.2f seconds." % (time.time() - start_time))
+    print('-' * 40)
+
 
 def main():
     while True:
