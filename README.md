@@ -10,13 +10,11 @@ Displays user types, gender, and birth year statistics when available.
 
 Includes input validation and raw data display.
 
-
+### Credits
+It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
 How to Use:
-Run the script and follow the prompts in the terminal
+Run the script and follow the prompts in the terminal.
 
 Finally:
-u would be working on US Bike share Data
-
-
-Hopefully you are comfortable with the date
+You would be working with US bike share data! Hopefully, you are comfortable using the data.
