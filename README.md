@@ -17,3 +17,6 @@ Run the script and follow the prompts in the terminal
 
 Finally:
 u would be working on US Bike share Data
+
+
+Hopefully you are comfortable with the date
